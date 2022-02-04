@@ -14,7 +14,7 @@ const Card = ({array}) => {
         e.preventDefault();
          dispatch(intituciones(`${e.target.dane.value}`))
      }
-  return <div className='contenedor_card'>
+  return <div className='contenedor_card animate__animated animate__pulse'>
        {
           array && array?.map(i => 
             <div className="card sombriado" key={i.dane} style={{width: 235 , margin:10}} >
@@ -27,7 +27,7 @@ const Card = ({array}) => {
        {/* <i className="material-icons right">more_vert </i> */}
       
       </span>
-      <p><button className="btn" type='submit'>Ver sedes </button></p>
+      <p><button className="btn blue" type='submit'>Ver sedes </button></p>
     </div>
     <div className="card-reveal">
     <input type="" name='dane' value={i.dane}  />

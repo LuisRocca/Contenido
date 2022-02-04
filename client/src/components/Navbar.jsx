@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import {useDispatch , useSelector} from 'react-redux';
 import { logout } from '../redux/actions/authAcitons'
 import { useEffect } from 'react';
@@ -8,7 +8,9 @@ const Navbar = () => {
 
   const nabigate = useNavigate()
   const dispatch = useDispatch();
-  const hablenabigator = () => {
+
+  const hablenabigator = (e) => {
+    e.preventDefault();
     nabigate(`/appScreen`)
   }
 
@@ -26,11 +28,11 @@ dispatch(logout())
   return <div>
 <nav className='stilo_navbar ' >
   <div className="nav-wrapper">
-    <a href="#!" style={{marginLeft: 20}} className="brand-logo">Control Sedes</a>
+    <Link to={`/appScreen`} style={{marginLeft: 20}} className="brand-logo">Control Sedes</Link>
     <ul className="right hide-on-med-and-down">
      
        <li><a onClick={handlelogout}>Logout</a></li>
-      <li><a onClick={hablenabigator} href="">Municipios</a></li>
+      <li><a onClick={e => hablenabigator(e)} href="">Municipios</a></li>
       
     </ul>
   </div>

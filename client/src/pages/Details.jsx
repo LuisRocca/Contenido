@@ -17,11 +17,11 @@ const Details = () => {
   dispatch(sedesDeunaInstitucion(`${dane}`))
   }, []);  
 
-  return <div className='container center'>
+  return <div className='container center animate__animated animate__flash' >
     {
        service.sedesInstitucion.length > 0 ?
        service.sedesInstitucion.map(e => 
-        <div className="row ">
+        <div className="row " style={{height: '50rem'}}>
         <div className="col s12 m6">
           <div className="card blue-grey darken-1">
             <div className="card-content white-text">
@@ -30,7 +30,7 @@ const Details = () => {
             </div>
             <div className="card-action">
               <Link to={`/grupo/${e.dane}`}>este instituto tiene un grupo</Link>
-              <Link to={`/appScreaan`} >Volver</Link>
+              <Link to={`/appScreen`} >Volver</Link>
             </div>
           </div>
         </div>

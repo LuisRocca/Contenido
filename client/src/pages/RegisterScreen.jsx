@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import {Link} from "react-router-dom"
 import { register } from '../redux/actions/authAcitons'
 import { useDispatch } from 'react-redux'
+import swal from 'sweetalert';
 
 const RegisterScreen = () => {
 
@@ -28,10 +29,21 @@ const RegisterScreen = () => {
        if (password.trim().length < 6) { return
         } else {if (password.trim() !== password2.trim()) return}
        dispatch(register(email, password, username))
+       setData({
+        email: "",
+        password: "",
+        password2: "",
+        username: "",
+       })
+       swal("Creasion exitosa!", {
+        buttons: false,
+        icon: 'success',
+        timer: 1500,
+      });
     }
 
     return (    
-        <div className="container animate__animated animate__zoomIn">
+        <div className="container animate__animated animate__zoomIn" style={{height: '50rem'}}>
           <h3>Register</h3>
           <hr />
           <div className="container">

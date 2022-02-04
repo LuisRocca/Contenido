@@ -9,6 +9,7 @@ import AppScreen from './pages/AppScreen'
 import Details from './pages/Details';
 import Navbar from './components/Navbar';
 import Group from './pages/Group';
+import Footer from './components/Footer';
 const App = () => {
 
 
@@ -24,6 +25,7 @@ const App = () => {
      <Route exact path='/details/:dane' element={<Details />} />
      <Route exact path='/grupo/:dane' element={<Group />} />
    </Routes>
+   <Footer />
    </>
   )
 }

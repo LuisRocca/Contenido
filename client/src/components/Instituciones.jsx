@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import '../css/card.css'
 
 const Instituciones = ({array}) => {
-  return <div className='vinculo_municipios' >
+  return <div className='vinculo_municipios  animate__animated animate__pulse' >
         <div className="row ">
         <div >
-          <div className="card blue-grey darken-1">
+          <div className="card blue-grey darken-1 ">
             <div className="card-action " style={{width: '45rem'}}>
-                <h4>SEDES</h4>
+                <h4>INSTITUCIONES</h4>
                 <hr />
             {
       array.length >= 0 ?

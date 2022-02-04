@@ -40,7 +40,7 @@ const LoginScreen = () => {
   
 
   return (
-    <div className="container animate__animated animate__zoomIn">
+    <div className="container animate__animated animate__zoomIn" style={{height: '50rem'}} >
     <h3>Login</h3>
     <hr />
     <div className="container">
