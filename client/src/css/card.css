@@ -1,0 +1,35 @@
+.contenedor_card {
+    width: 50%; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 20px
+}
+
+.sombriado {
+    box-shadow: rgb(110, 109, 109) 10px 8px 5px ;
+}
+
+.stilo_navbar {
+    background-color: #546e7a;
+}
+
+.contenedor_flexible {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ 
+img {
+    height: 100px;
+}
+
+.vinculo_municipios {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    /* width: 50%; */
+    align-content: flex-start;
+}
