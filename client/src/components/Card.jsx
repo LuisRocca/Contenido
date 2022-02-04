@@ -14,7 +14,6 @@ const Card = ({array}) => {
         e.preventDefault();
          dispatch(intituciones(`${e.target.dane.value}`))
      }
-
   return <div className='contenedor_card'>
        {
           array && array?.map(i => 
